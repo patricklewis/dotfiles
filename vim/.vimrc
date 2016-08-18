@@ -24,7 +24,7 @@ set foldlevelstart=99
 "set wildignore+=*/tmp/*
 "set wildignore+=*/cache*
 
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
 Plug 'benekastah/neomake'
