@@ -28,7 +28,7 @@ call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
 Plug 'benekastah/neomake'
-"Plug 'benmills/vimux'
+Plug 'benmills/vimux'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ervandew/supertab'
@@ -147,9 +147,14 @@ end
 "let g:neoterm_raise_when_tests_fail = 1
 
 "" vim-test
-let test#strategy = 'neovim'
+let test#strategy = 'vimux'
 nmap <silent> <leader>rt :TestFile<CR>
 nmap <silent> <leader>rT :TestNearest<CR>
+
+"" vim-grepper
+let g:grepper = { 'tools': ['pt', 'git'] }
+nnoremap <leader>git :Grepper -tool git<CR>
+nnoremap <leader>pt :Grepper -tool pt<CR>
 
 "" Vimux mappings
 let g:VimuxHeight = 40
