@@ -189,7 +189,3 @@ let g:jsx_ext_required = 1
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_php_enabled_makers = ['phpcs']
-
-"set statusline+=%#NeotermTestRunning#%{neoterm#test#status('running')}%*
-"set statusline+=%#NeotermTestSuccess#%{neoterm#test#status('success')}%*
-"set statusline+=%#NeotermTestFailed#%{neoterm#test#status('failed')}%*
