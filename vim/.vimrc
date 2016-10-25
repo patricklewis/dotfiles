@@ -189,3 +189,11 @@ let g:jsx_ext_required = 1
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_php_enabled_makers = ['phpcs']
+
+" Supertab
+let g:SuperTabDefaultCompletionType = "context"
+
+autocmd FileType *
+  \ if &omnifunc != '' |
+  \   call SuperTabChain(&omnifunc, "<c-p>") |
+  \ endif
