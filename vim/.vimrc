@@ -17,7 +17,7 @@ set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
 "" Folding
-set foldmethod=syntax
+"set foldmethod=syntax
 set foldlevelstart=99
 
 "set wildignore+=*/vendor/*
@@ -176,9 +176,6 @@ map <Leader>vx :VimuxInterruptRunner<CR>
 
 " Fix ctrl-k conflict with ultisnips
 inoremap <c-x><c-k> <c-x><c-k>
-
-" Enable JavaScript folding
-au FileType javascript call JavaScriptFold()
 
 " Load JavaScript library syntax
 let g:used_javascript_libs = 'angularjs,angularui,angularuirouter,lodash,react'
