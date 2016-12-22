@@ -46,7 +46,7 @@ Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'ntpeters/vim-better-whitespace'
-"Plug 'rstacruz/sparkup'
+Plug 'rstacruz/sparkup'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-bundler'
@@ -62,10 +62,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'hdima/python-syntax'
-Plug 'jelera/vim-javascript-syntax'
 Plug 'juvenn/mustache.vim'
 Plug 'kchmck/vim-coffee-script'
-"Plug 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -182,7 +181,7 @@ inoremap <c-x><c-k> <c-x><c-k>
 au FileType javascript call JavaScriptFold()
 
 " Load JavaScript library syntax
-let g:used_javascript_libs = 'angularjs,angularui,angularuirouter,lodash,jquery'
+let g:used_javascript_libs = 'angularjs,angularui,angularuirouter,lodash,react'
 let g:jsx_ext_required = 1
 
 " Neomake
