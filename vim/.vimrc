@@ -179,11 +179,12 @@ inoremap <c-x><c-k> <c-x><c-k>
 
 " Load JavaScript library syntax
 let g:used_javascript_libs = 'angularjs,angularui,angularuirouter,lodash,react'
-let g:jsx_ext_required = 1
+let g:jsx_ext_required = 0
 
 " Neomake
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['standard']
+let g:neomake_jsx_enabled_makers = ['standard']
 let g:neomake_php_enabled_makers = ['phpcs']
 
 " Supertab
