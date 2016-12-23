@@ -183,7 +183,7 @@ let g:jsx_ext_required = 1
 
 " Neomake
 autocmd! BufWritePost * Neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_enabled_makers = ['standard']
 let g:neomake_php_enabled_makers = ['phpcs']
 
 " Supertab
