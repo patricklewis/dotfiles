@@ -1,2 +1,3 @@
 vim/.vim/plugged/
 neovim/.config/nvim/plugged/
+plug.vim.old
