@@ -1,4 +1,3 @@
-set t_Co=88
 set nocompatible                " choose no compatibility with legacy vi
 set number                      " display line numbers
 set ttyfast                     " optimize for fast terminal connections
@@ -81,9 +80,16 @@ Plug 'chriskempson/base16-vim'
 call plug#end()
 
 "" Colorscheme
+set t_Co=88
 set background=dark
-"let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-monokai
+
+if filereadable(expand("~/.vimrc_background"))
+  set t_Co=256
+  let base16colorspace=256
+  source ~/.vimrc_background
+  set termguicolors
+endif
 
 "" Airline
 let g:airline_powerline_fonts = 1
