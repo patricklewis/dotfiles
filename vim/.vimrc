@@ -80,14 +80,10 @@ Plug 'chriskempson/base16-vim'
 call plug#end()
 
 "" Colorscheme
-set t_Co=88
 set background=dark
 colorscheme base16-monokai
 
-if filereadable(expand("~/.vimrc_background"))
-  set t_Co=256
-  let base16colorspace=256
-  source ~/.vimrc_background
+if has('termguicolors')
   set termguicolors
 endif
 
