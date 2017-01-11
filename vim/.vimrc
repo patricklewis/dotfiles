@@ -26,7 +26,6 @@ set foldlevelstart=99
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
-Plug 'benekastah/neomake'
 Plug 'benmills/vimux'
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
@@ -45,6 +44,7 @@ Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'patricklewis/ale'
 Plug 'rstacruz/sparkup'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -183,12 +183,6 @@ inoremap <c-x><c-k> <c-x><c-k>
 let g:used_javascript_libs = 'angularjs,angularui,angularuirouter,lodash,react'
 let g:jsx_ext_required = 0
 
-" Neomake
-autocmd! BufWritePost * Neomake
-let g:neomake_javascript_enabled_makers = ['standard']
-let g:neomake_jsx_enabled_makers = ['standard']
-let g:neomake_php_enabled_makers = ['phpcs']
-
 " Supertab
 let g:SuperTabDefaultCompletionType = "context"
 
@@ -196,3 +190,10 @@ autocmd FileType *
   \ if &omnifunc != '' |
   \   call SuperTabChain(&omnifunc, "<c-p>") |
   \ endif
+
+" Asynchronous Lint Engine
+let g:ale_sign_error = '✖✖'
+let g:ale_sigin_warning = '⚠⚠'
+
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
