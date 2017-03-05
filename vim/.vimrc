@@ -151,7 +151,9 @@ end
 "let g:neoterm_raise_when_tests_fail = 1
 
 "" vim-test
-let test#strategy = 'vimux'
+let g:test#strategy = 'vimux'
+nmap <silent> <leader>rn :TestFile --next-failure<CR>
+nmap <silent> <leader>ro :TestFile --only-failures<CR>
 nmap <silent> <leader>rt :TestFile<CR>
 nmap <silent> <leader>rT :TestNearest<CR>
 
