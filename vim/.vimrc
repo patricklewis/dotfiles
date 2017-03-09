@@ -56,6 +56,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
 
 "" Language-specific Plugs
 Plug 'cakebaker/scss-syntax.vim'
