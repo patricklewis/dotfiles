@@ -56,6 +56,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
+Plug 'weihanglo/tmuxline.vim' " replace with upstream repo once truecolor support is merged in
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 
