@@ -61,6 +61,7 @@ Plug 'xolox/vim-notes'
 
 "" Language-specific Plugs
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'dag/vim-fish'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'hdima/python-syntax'
 Plug 'juvenn/mustache.vim'
