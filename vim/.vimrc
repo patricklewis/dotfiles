@@ -162,9 +162,8 @@ nmap <silent> <leader>rt :TestFile<CR>
 nmap <silent> <leader>rT :TestNearest<CR>
 
 "" vim-grepper
-let g:grepper = { 'tools': ['rg', 'pt', 'git'] }
+let g:grepper = { 'tools': ['rg', 'git'] }
 nnoremap <leader>git :Grepper -tool git<CR>
-nnoremap <leader>pt :Grepper -tool pt<CR>
 nnoremap <leader>rg :Grepper -tool rg<CR>
 
 "" Vimux mappings

@@ -26,9 +26,9 @@ if test -d ~/bin
   set PATH ~/bin $PATH
 end
 
-# configure fzf to use pt if available
-if type -q pt
-  set FZF_DEFAULT_COMMAND 'pt -g ""'
+# configure fzf to use ripgrep if available
+if type -q rg
+  set FZF_DEFAULT_COMMAND 'rg -g ""'
 end
 
 # define function for fixing ssh issues in tmux sessions
