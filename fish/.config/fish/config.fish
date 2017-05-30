@@ -28,7 +28,7 @@ end
 
 # configure fzf to use ripgrep if available
 if type -q rg
-  set FZF_DEFAULT_COMMAND 'rg -g ""'
+  set -x FZF_DEFAULT_COMMAND 'rg --files'
 end
 
 # define function for fixing ssh issues in tmux sessions
