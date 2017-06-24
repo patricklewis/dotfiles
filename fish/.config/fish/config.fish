@@ -30,3 +30,6 @@ end
 if type -q rg
   set -x FZF_DEFAULT_COMMAND 'rg --files'
 end
+
+set -x EDITOR vim
+set -x VISUAL $EDITOR
