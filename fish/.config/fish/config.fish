@@ -30,8 +30,3 @@ end
 if type -q rg
   set -x FZF_DEFAULT_COMMAND 'rg --files'
 end
-
-# define function for fixing ssh issues in tmux sessions
-function fixssh
-  tmux setenv SSH_AUTH_SOCK $SSH_AUTH_SOCK
-end
