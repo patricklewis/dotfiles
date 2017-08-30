@@ -26,7 +26,7 @@ set foldlevelstart=99
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
-Plug 'christoomey/vim-tmux-runner'
+Plug 'benmills/vimux'
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 "Plug 'godlygeek/tabular'
@@ -153,7 +153,7 @@ end
 "let g:neoterm_raise_when_tests_fail = 1
 
 "" vim-test
-let g:test#strategy = 'vtr'
+let g:test#strategy = 'vimux'
 nmap <silent> <leader>rn :TestFile --next-failure<CR>
 nmap <silent> <leader>ro :TestFile --only-failures<CR>
 nmap <silent> <leader>rt :TestFile<CR>
@@ -164,10 +164,23 @@ let g:grepper = { 'tools': ['rg', 'git'] }
 nnoremap <leader>git :Grepper -tool git<CR>
 nnoremap <leader>rg :Grepper -tool rg<CR>
 
-"" VTR
-map <Leader>vk :VtrKillRunner<CR>
-map <Leader>vl :VtrSendCommandToRunner<CR>
-map <Leader>vo :VtrOpenRunner<CR>
+"" Vimux mappings
+let g:VimuxHeight = 40
+
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+
+" Close vim tmux runner opened by VimuxRunCommand
+map <Leader>vq :VimuxCloseRunner<CR>
+
+" Interrupt any command running in the runner pane
+map <Leader>vx :VimuxInterruptRunner<CR>
 
 " Fix ctrl-k conflict with ultisnips
 inoremap <c-x><c-k> <c-x><c-k>
