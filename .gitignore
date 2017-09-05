@@ -1,2 +1,5 @@
+fish/.config/fish/completions
+fish/.config/fish/functions
+fishd.*
 vim/.vim/plugged
 plug.vim.old
