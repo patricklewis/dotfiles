@@ -59,7 +59,6 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 
 "" Language-specific Plugs
-Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
@@ -172,10 +171,6 @@ map <Leader>vx :VimuxInterruptRunner<CR>
 
 " Fix ctrl-k conflict with ultisnips
 inoremap <c-x><c-k> <c-x><c-k>
-
-" Load JavaScript library syntax
-let g:used_javascript_libs = 'angularjs,angularui,angularuirouter,lodash,react'
-let g:jsx_ext_required = 0
 
 " Supertab
 let g:SuperTabDefaultCompletionType = "context"
