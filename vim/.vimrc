@@ -37,6 +37,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
 "Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'justinmk/vim-sneak'
 "Plug 'kien/tabman.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mbbill/undotree'
