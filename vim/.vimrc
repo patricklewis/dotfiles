@@ -33,6 +33,7 @@ Plug 'ervandew/supertab'
 "Plug 'honza/vim-snippets'
 "Plug 'jgdavey/vim-turbux'
 Plug 'janko-m/vim-test'
+Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
@@ -184,3 +185,6 @@ autocmd FileType *
 " Asynchronous Lint Engine
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
+
+" Improve performance with vim-vue
+let g:vue_disable_pre_processors=1
