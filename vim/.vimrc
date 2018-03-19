@@ -123,17 +123,6 @@ if ! has('gui_running')
     augroup END
 endif
 
-"NeoVim handles ESC keys as alt+key, set this to solve the problem
-if has('nvim')
-   set ttimeout
-   set ttimeoutlen=0
-end
-
-"" Neoterm
-"map <leader>rt :call neoterm#test#run('file')<CR>
-"map <leader>rT :call neoterm#test#run('current')<CR>
-"let g:neoterm_raise_when_tests_fail = 1
-
 "" vim-test
 let g:test#strategy = 'vimux'
 nmap <silent> <leader>rn :TestFile --next-failure<CR>
