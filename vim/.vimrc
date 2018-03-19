@@ -31,7 +31,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 "Plug 'godlygeek/tabular'
 "Plug 'honza/vim-snippets'
-"Plug 'jgdavey/vim-turbux'
 Plug 'janko-m/vim-test'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
@@ -129,12 +128,6 @@ if has('nvim')
    set ttimeout
    set ttimeoutlen=0
 end
-
-"" Turbux
-"let g:turbux_command_prefix = 'bundle exec'
-"let g:no_turbux_mappings = 1
-"map <leader>rt <Plug>SendTestToTmux
-"map <leader>rT <Plug>SendFocusedTestToTmux
 
 "" Neoterm
 "map <leader>rt :call neoterm#test#run('file')<CR>
