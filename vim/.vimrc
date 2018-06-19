@@ -157,6 +157,8 @@ autocmd FileType *
 " Asynchronous Lint Engine
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
+" Use background color from base16-monokai when highlighting ALE warnings
+call g:Base16hi("ALEWarning", "", "49483e", "", "19", "", "")
 
 " Improve performance with vim-vue
 let g:vue_disable_pre_processors=1
