@@ -3,3 +3,4 @@ fish/.config/fish/functions
 fishd.*
 vim/.vim/plugged
 plug.vim.old
+*.swp
