@@ -27,6 +27,7 @@ call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
 Plug 'benmills/vimux'
+Plug 'dyng/ctrlsf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 "Plug 'godlygeek/tabular'
@@ -113,6 +114,9 @@ map <Leader>T :TagbarToggle<CR>
 "" Copy to OS X clipboard
 set clipboard=unnamed
 
+"" vim-better-whitespace
+let g:better_whitespace_filetypes_blacklist=['ctrlsf', 'diff', 'gitcommit', 'unite', 'qf', 'help']
+
 "" vim-test
 let g:test#strategy = 'vimux'
 nmap <silent> <leader>rn :TestFile --next-failure<CR>
@@ -124,6 +128,18 @@ nmap <silent> <leader>rT :TestNearest<CR>
 let g:grepper = { 'tools': ['rg', 'git'] }
 nnoremap <leader>git :Grepper -tool git<CR>
 nnoremap <leader>rg :Grepper -tool rg<CR>
+
+"" ctrlsf.vim
+let g:ctrlsf_indent = 2
+let g:ctrlsf_populate_qflist = 1
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
 "" Vimux mappings
 let g:VimuxHeight = 40
