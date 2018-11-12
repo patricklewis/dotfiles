@@ -29,6 +29,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'benmills/vimux'
 Plug 'dyng/ctrlsf.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 "Plug 'godlygeek/tabular'
 "Plug 'honza/vim-snippets'
@@ -66,13 +67,13 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
 
 "" Colorschemes
-Plug 'chriskempson/base16-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
 "" Colorscheme
 set background=dark
-colorscheme base16-monokai
+colorscheme dracula
 
 "" Truecolor
 if has('termguicolors')
@@ -83,7 +84,7 @@ endif
 
 "" Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='base16'
+let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled = 1
 
 "" Undotree
@@ -173,9 +174,6 @@ autocmd FileType *
 " Asynchronous Lint Engine
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
-" Use background color from base16-monokai when highlighting ALE warnings
-" call g:Base16hi("ALEWarning", "", "49483e", "", "19", "", "")
-call g:Base16hi("ALEWarning", "", "383830", "", "10", "", "")
 hi ALEWarning cterm=underline
 
 " Improve performance with vim-vue
