@@ -1,3 +1,26 @@
+# add camp binaries to path
+if test -d /home/camp/bin
+  set PATH /home/camp/bin $PATH
+end
+
+# add locally-installed binaries to path
+if test -d ~/bin
+  set PATH ~/bin $PATH
+end
+
+# add linuxbrew binaries to path
+if test -d ~/.linuxbrew
+  set PATH ~/.linuxbrew/bin ~/.linuxbrew/sbin $PATH
+end
+
+# configure fzf to use ripgrep if available
+if type -q rg
+  set -x FZF_DEFAULT_COMMAND 'rg --files'
+end
+
+set -x EDITOR vim
+set -x VISUAL $EDITOR
+
 # initialize rbenv
 if test -d ~/.rbenv/shims
   if test -d ~/.rbenv/bin
@@ -16,20 +39,3 @@ if test -d ~/.nodenv/shims
   status --is-interactive; and source (nodenv init - --no-rehash|psub)
 end
 
-# add camp binaries to path
-if test -d /home/camp/bin
-  set PATH /home/camp/bin $PATH
-end
-
-# add locally-installed binaries to path
-if test -d ~/bin
-  set PATH ~/bin $PATH
-end
-
-# configure fzf to use ripgrep if available
-if type -q rg
-  set -x FZF_DEFAULT_COMMAND 'rg --files'
-end
-
-set -x EDITOR vim
-set -x VISUAL $EDITOR
