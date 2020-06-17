@@ -6,3 +6,5 @@ fishd.*
 vim/.vim/plugged
 plug.vim.old
 *.swp
+tmux/.tmux/plugins/*
+!tmux/.tmux/plugins/tpm
