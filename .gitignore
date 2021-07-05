@@ -1,8 +1,10 @@
+*.swp
 fish/.config/fish/conf.d/
 fish/.config/fish/completions/
 fish/.config/fish/fish_variables
 fish/.config/fish/functions/
 fishd.*
-vim/.vim/plugged
 plug.vim.old
-*.swp
+tmux/.tmux/plugins
+!tmux/.tmux/plugins/tpm
+vim/.vim/plugged
