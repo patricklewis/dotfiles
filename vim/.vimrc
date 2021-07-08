@@ -90,9 +90,9 @@ let g:airline#extensions#tabline#enabled = 1
 map <silent> <Leader>u :UndotreeToggle<CR>
 
 "" Fugitive
-map <Leader>gc :Gcommit<CR>
+map <Leader>gc :Git commit<CR>
 map <Leader>gd :Git diff --cached<CR>
-map <Leader>gs :Gstatus<CR>
+map <Leader>gs :Git<CR>
 
 "" FZF
 map <silent> <Leader>ff :FZF<CR>
