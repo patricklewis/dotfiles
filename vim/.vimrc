@@ -32,6 +32,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 "Plug 'godlygeek/tabular'
 "Plug 'honza/vim-snippets'
+Plug 'itchyny/lightline.vim'
+Plug 'maximbaz/lightline-ale'
 Plug 'janko-m/vim-test'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
@@ -54,8 +56,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
@@ -104,6 +104,38 @@ map <silent> <Leader>fL :BLines<CR>
 map <silent> <Leader>ft :Tags<CR>
 map <silent> <Leader>fT :BTags<CR>
 map <silent> <Leader>fw :Windows<CR>
+
+"" Lightline
+let g:lightline = {
+  \   'colorscheme': 'dracula',
+  \   'active': {
+  \     'left': [ [ 'mode', 'paste' ],
+  \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+  \     'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ],
+  \                [ 'lineinfo' ],
+  \                [ 'percent' ],
+  \                [ 'fileformat', 'fileencoding', 'filetype'] ]
+  \   },
+  \   'component_expand': {
+  \     'linter_checking': 'lightline#ale#checking',
+  \     'linter_infos': 'lightline#ale#infos',
+  \     'linter_warnings': 'lightline#ale#warnings',
+  \     'linter_errors': 'lightline#ale#errors',
+  \     'linter_ok': 'lightline#ale#ok'
+  \   },
+  \   'component_function': {
+  \     'gitbranch': 'FugitiveHead'
+  \   },
+  \   'component_type': {
+  \     'linter_checking': 'right',
+  \     'linter_infos': 'right',
+  \     'linter_warnings': 'warning',
+  \     'linter_errors': 'error',
+  \     'linter_ok': 'right'
+  \   },
+  \   'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+  \   'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
+  \ }
 
 "" NERDTree
 map <Leader>t :NERDTreeToggle<CR>
