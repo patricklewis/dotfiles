@@ -38,8 +38,3 @@ if test -d ~/.nodenv/shims
 
   status --is-interactive; and source (nodenv init - --no-rehash|psub)
 end
-
-# bootstrap fisher
-if not functions -q fisher
-  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-end
