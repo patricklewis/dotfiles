@@ -42,7 +42,7 @@ Plug 'junegunn/gv.vim'
 "Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'justinmk/vim-sneak'
 "Plug 'kien/tabman.vim'
-Plug 'majutsushi/tagbar'
+Plug 'liuchengxu/vista.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper'
@@ -140,8 +140,9 @@ let g:lightline = {
 "" NERDTree
 map <Leader>t :NERDTreeToggle<CR>
 
-"" Tagbar
-map <Leader>T :TagbarToggle<CR>
+"" Vista
+let g:vista#renderer#enable_icon = 0
+map <Leader>T :Vista!!<CR>
 
 "" Copy to OS X clipboard
 set clipboard=unnamed
