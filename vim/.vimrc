@@ -47,6 +47,7 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper'
 Plug 'michaeljsmith/vim-indent-object'
+Plug 'neovim/nvim-lspconfig'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
@@ -80,6 +81,12 @@ if has('termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
+
+"" nvim-lspconfig
+lua << EOF
+require'lspconfig'.solargraph.setup{}
+require'lspconfig'.sorbet.setup{}
+EOF
 
 "" Airline
 let g:airline_powerline_fonts = 1
