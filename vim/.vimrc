@@ -88,11 +88,6 @@ require'lspconfig'.solargraph.setup{}
 require'lspconfig'.sorbet.setup{}
 EOF
 
-"" Airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme='dracula'
-let g:airline#extensions#tabline#enabled = 1
-
 "" Undotree
 map <silent> <Leader>u :UndotreeToggle<CR>
 
