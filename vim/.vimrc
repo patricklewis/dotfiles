@@ -27,6 +27,7 @@ call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
 Plug 'benmills/vimux'
+Plug 'dense-analysis/ale'
 Plug 'dyng/ctrlsf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
@@ -58,7 +59,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-unimpaired'
-Plug 'w0rp/ale'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 
@@ -85,6 +85,7 @@ endif
 
 "" nvim-lspconfig
 lua << EOF
+require'lspconfig'.flow.setup{}
 require'lspconfig'.solargraph.setup{}
 require'lspconfig'.sorbet.setup{}
 EOF
@@ -209,7 +210,11 @@ autocmd FileType *
 " Asynchronous Lint Engine
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
+let g:ale_linters_ignore = { 'javascriptreact': ['tsserver'] }
 hi ALEWarning cterm=underline
 
 " Improve performance with vim-vue
 let g:vue_disable_pre_processors=1
+
+" Startify
+let g:startify_change_to_vcs_root = 1
