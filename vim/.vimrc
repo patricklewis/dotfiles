@@ -68,13 +68,13 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
 
 "" Colorschemes
-Plug 'arcticicestudio/nord-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
 "" Colorscheme
 set background=dark
-colorscheme nord
+colorscheme dracula
 
 "" Truecolor
 if has('termguicolors')
@@ -111,7 +111,7 @@ map <silent> <Leader>fw :Windows<CR>
 
 "" Lightline
 let g:lightline = {
-  \   'colorscheme': 'nord',
+  \   'colorscheme': 'dracula',
   \   'active': {
   \     'left': [ [ 'mode', 'paste' ],
   \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
