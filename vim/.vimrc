@@ -51,7 +51,6 @@ Plug 'mhinz/vim-startify'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
@@ -140,9 +139,6 @@ let g:lightline = {
   \   'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
   \   'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
   \ }
-
-"" NERDTree
-map <Leader>t :NERDTreeToggle<CR>
 
 "" Vista
 let g:vista#renderer#enable_icon = 0
