@@ -11,18 +11,5 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-	{
-		"ggandor/leap.nvim",
-		config = function()
-			require('leap').add_default_mappings()
-		end
-	},
-	{
-		"Mofiqul/dracula.nvim",
-		config = function()
-			vim.cmd[[colorscheme dracula]]
-		end
-	},
-})
+require("lazy").setup("plugins")
 
