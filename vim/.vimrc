@@ -25,46 +25,48 @@ set foldlevelstart=99
 
 call plug#begin()
 
-Plug 'airblade/vim-gitgutter'
-Plug 'benmills/vimux'
-Plug 'dense-analysis/ale'
-Plug 'dyng/ctrlsf.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'ervandew/supertab'
+"Plug 'airblade/vim-gitgutter'
+"Plug 'benmills/vimux'
+"Plug 'dense-analysis/ale'
+"Plug 'dyng/ctrlsf.vim'
+"Plug 'easymotion/vim-easymotion'
+"Plug 'ervandew/supertab'
+"Plug 'github/copilot.vim'
 "Plug 'godlygeek/tabular'
 "Plug 'honza/vim-snippets'
+Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
-Plug 'janko-m/vim-test'
-Plug 'jparise/vim-graphql'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/gv.vim'
+"Plug 'janko-m/vim-test'
+"Plug 'jparise/vim-graphql'
+"Plug 'junegunn/gv.vim'
 "Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'justinmk/vim-sneak'
+"Plug 'justinmk/vim-sneak'
 "Plug 'kien/tabman.vim'
-Plug 'liuchengxu/vista.vim'
-Plug 'mattn/emmet-vim'
-Plug 'mbbill/undotree'
-Plug 'mhinz/vim-grepper'
-Plug 'mhinz/vim-startify'
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'neovim/nvim-lspconfig'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-unimpaired'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-notes'
+"Plug 'liuchengxu/vista.vim'
+"Plug 'mattn/emmet-vim'
+"Plug 'mbbill/undotree'
+"Plug 'mhinz/vim-grepper'
+"Plug 'mhinz/vim-startify'
+"Plug 'michaeljsmith/vim-indent-object'
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'ntpeters/vim-better-whitespace'
+Plug 'nvim-tree/nvim-web-devicons'
+"Plug 'rhysd/conflict-marker.vim'
+"Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-endwise'
+"Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-repeat'
+"Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-sensible'
+"Plug 'tpope/vim-unimpaired'
+"Plug 'xolox/vim-misc'
+"Plug 'xolox/vim-notes'
 
 "" Language-specific Plugs
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-rails'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'tpope/vim-bundler'
+"Plug 'tpope/vim-rails'
 
 "" Colorschemes
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -83,11 +85,10 @@ if has('termguicolors')
 endif
 
 "" nvim-lspconfig
-lua << EOF
-require'lspconfig'.flow.setup{}
-require'lspconfig'.solargraph.setup{}
-require'lspconfig'.sorbet.setup{}
-EOF
+"lua << EOF
+"require'lspconfig'.flow.setup{}
+"require'lspconfig'.solargraph.setup{}
+"EOF
 
 "" Undotree
 map <silent> <Leader>u :UndotreeToggle<CR>
@@ -96,17 +97,6 @@ map <silent> <Leader>u :UndotreeToggle<CR>
 map <Leader>gc :Git commit<CR>
 map <Leader>gd :Git diff --cached<CR>
 map <Leader>gs :Git<CR>
-
-"" FZF
-map <silent> <Leader>ff :FZF<CR>
-map <silent> <Leader>fb :Buffers<CR>
-map <silent> <Leader>fh :History<CR>
-map <silent> <Leader>f: :History:<CR>
-map <silent> <Leader>fl :Lines<CR>
-map <silent> <Leader>fL :BLines<CR>
-map <silent> <Leader>ft :Tags<CR>
-map <silent> <Leader>fT :BTags<CR>
-map <silent> <Leader>fw :Windows<CR>
 
 "" Lightline
 let g:lightline = {
@@ -206,7 +196,7 @@ autocmd FileType *
 " Asynchronous Lint Engine
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
-let g:ale_linters_ignore = { 'javascriptreact': ['tsserver'] }
+let g:ale_linters_ignore = { 'javascriptreact': ['tsserver'], 'javascript': ['tsserver'] }
 hi ALEWarning cterm=underline
 
 " Improve performance with vim-vue
