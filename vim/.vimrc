@@ -31,6 +31,7 @@ call plug#begin()
 "Plug 'dyng/ctrlsf.vim'
 "Plug 'easymotion/vim-easymotion'
 "Plug 'ervandew/supertab'
+Plug 'ggandor/leap.nvim'
 "Plug 'github/copilot.vim'
 "Plug 'godlygeek/tabular'
 "Plug 'honza/vim-snippets'
@@ -41,7 +42,6 @@ Plug 'maximbaz/lightline-ale'
 "Plug 'jparise/vim-graphql'
 "Plug 'junegunn/gv.vim'
 "Plug 'junegunn/rainbow_parentheses.vim'
-"Plug 'justinmk/vim-sneak'
 "Plug 'kien/tabman.vim'
 "Plug 'liuchengxu/vista.vim'
 "Plug 'mattn/emmet-vim'
@@ -55,7 +55,7 @@ Plug 'maximbaz/lightline-ale'
 "Plug 'tpope/vim-commentary'
 "Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-"Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 "Plug 'tpope/vim-surround'
 "Plug 'tpope/vim-sensible'
 "Plug 'tpope/vim-unimpaired'
@@ -86,6 +86,9 @@ endif
 "" fzf-lua
 map <silent> <Leader>ff :FzfLua files<CR>
 map <silent> <Leader>fb :FzfLua buffers<CR>
+
+"" leap
+lua require('leap').add_default_mappings()
 
 "" nvim-lspconfig
 "lua << EOF
