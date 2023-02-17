@@ -51,7 +51,6 @@ Plug 'maximbaz/lightline-ale'
 "Plug 'michaeljsmith/vim-indent-object'
 "Plug 'neovim/nvim-lspconfig'
 "Plug 'ntpeters/vim-better-whitespace'
-Plug 'nvim-tree/nvim-web-devicons'
 "Plug 'rhysd/conflict-marker.vim'
 "Plug 'tpope/vim-commentary'
 "Plug 'tpope/vim-endwise'
@@ -83,6 +82,10 @@ if has('termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
+
+"" fzf-lua
+map <silent> <Leader>ff :FzfLua files<CR>
+map <silent> <Leader>fb :FzfLua buffers<CR>
 
 "" nvim-lspconfig
 "lua << EOF
