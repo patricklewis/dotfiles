@@ -205,8 +205,5 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_linters_ignore = { 'javascriptreact': ['tsserver'], 'javascript': ['tsserver'] }
 hi ALEWarning cterm=underline
 
-" Improve performance with vim-vue
-let g:vue_disable_pre_processors=1
-
 " Startify
 let g:startify_change_to_vcs_root = 1
