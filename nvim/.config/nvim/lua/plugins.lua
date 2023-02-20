@@ -55,6 +55,18 @@ return {
       }
     end
 	},
+  {
+    'nvim-tree/nvim-tree.lua',
+    config = function()
+      require('nvim-tree').setup()
+    end,
+    keys = {
+      {
+        '<leader>t',
+        '<cmd>NvimTreeToggle<cr>'
+      }
+    }
+  },
 	{
 		'nvim-tree/nvim-web-devicons'
 	},
