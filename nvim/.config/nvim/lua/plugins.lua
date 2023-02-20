@@ -11,16 +11,22 @@ return {
       {
         '<leader>ff',
         function()
-          require("fzf-lua").files()
+          require('fzf-lua').files()
         end
       },
       {
         '<leader>fb',
         function()
-          require("fzf-lua").buffers()
+          require('fzf-lua').buffers()
         end
       }
     }
+  },
+  {
+    'kylechui/nvim-surround',
+    config = function()
+      require('nvim-surround').setup()
+    end
   },
   {
     'lewis6991/gitsigns.nvim',
