@@ -18,8 +18,8 @@ local opt = vim.opt
 opt.rtp:prepend(lazypath)
 
 opt.expandtab = true
-opt.foldenable = false
 opt.foldexpr = 'nvim_treesitter#foldexpr()'
+opt.foldlevelstart = 99
 opt.foldmethod = 'expr'
 opt.hlsearch = true
 opt.ignorecase = true
