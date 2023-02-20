@@ -9,7 +9,20 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
-vim.opt.rtp:prepend(lazypath)
+
+local opt = vim.opt
+
+opt.rtp:prepend(lazypath)
+
+opt.expandtab = true
+opt.foldmethod = 'syntax'
+opt.hlsearch = true
+opt.ignorecase = true
+opt.number = true
+opt.shiftwidth = 2
+opt.smartcase = true
+opt.tabstop = 2
+opt.termguicolors = true
 
 require("lazy").setup("plugins")
 
