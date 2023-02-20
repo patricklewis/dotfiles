@@ -18,7 +18,9 @@ local opt = vim.opt
 opt.rtp:prepend(lazypath)
 
 opt.expandtab = true
-opt.foldmethod = 'syntax'
+opt.foldenable = false
+opt.foldexpr = 'nvim_treesitter#foldexpr()'
+opt.foldmethod = 'expr'
 opt.hlsearch = true
 opt.ignorecase = true
 opt.number = true
@@ -28,4 +30,3 @@ opt.tabstop = 2
 opt.termguicolors = true
 
 require("lazy").setup("plugins")
-

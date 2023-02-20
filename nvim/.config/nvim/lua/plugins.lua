@@ -1,10 +1,10 @@
 return {
-	{
-		'ggandor/leap.nvim',
-		config = function()
-			require('leap').add_default_mappings()
-		end
-	},
+  {
+    'ggandor/leap.nvim',
+    config = function()
+      require('leap').add_default_mappings()
+    end
+  },
   {
     'ibhagwan/fzf-lua',
     config = function()
@@ -43,19 +43,19 @@ return {
       require('gitsigns').setup()
     end
   },
-	{
-		'Mofiqul/dracula.nvim',
+  {
+    'Mofiqul/dracula.nvim',
     lazy = false,
     priority = 1000,
-		config = function()
-			vim.cmd[[colorscheme dracula]]
-		end
-	},
+    config = function()
+      vim.cmd[[colorscheme dracula]]
+    end
+  },
   {
     'ntpeters/vim-better-whitespace'
   },
-	{
-		'nvim-lualine/lualine.nvim',
+  {
+    'nvim-lualine/lualine.nvim',
     config = function()
       require('lualine').setup {
         options = {
@@ -63,7 +63,7 @@ return {
         }
       }
     end
-	},
+  },
   {
     'nvim-tree/nvim-tree.lua',
     config = function()
@@ -76,11 +76,23 @@ return {
       }
     }
   },
-	{
-		'nvim-tree/nvim-web-devicons'
-	},
-	{
-		'tpope/vim-fugitive',
+  {
+    'nvim-tree/nvim-web-devicons'
+  },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        ensure_installed = { 'javascript', 'lua', 'ruby', 'vim' },
+        highlight = {
+          enable = true
+        }
+      }
+    end
+  },
+  {
+    'tpope/vim-fugitive',
     keys = {
       {
         '<leader>gc',
@@ -95,5 +107,5 @@ return {
         '<cmd>Git status<cr>'
       }
     }
-	}
+  }
 }
