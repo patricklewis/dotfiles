@@ -7,6 +7,9 @@ return {
 	},
   {
     'ibhagwan/fzf-lua',
+    config = function()
+      require('fzf-lua').setup()
+    end,
     keys = {
       {
         '<leader>ff',
@@ -18,6 +21,12 @@ return {
         '<leader>fb',
         function()
           require('fzf-lua').buffers()
+        end
+      },
+      {
+        '<leader>rg',
+        function()
+          require('fzf-lua').grep_project()
         end
       }
     }
