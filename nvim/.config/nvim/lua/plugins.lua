@@ -99,7 +99,7 @@ return {
     build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'javascript', 'lua', 'ruby', 'vim' },
+        ensure_installed = { 'javascript', 'lua', 'ruby', 'sql', 'vim' },
         highlight = {
           enable = true
         }
