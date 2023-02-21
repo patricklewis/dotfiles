@@ -25,6 +25,7 @@ opt.hlsearch = true
 opt.ignorecase = true
 opt.number = true
 opt.shiftwidth = 2
+opt.signcolumn = 'yes'
 opt.smartcase = true
 opt.tabstop = 2
 opt.termguicolors = true
