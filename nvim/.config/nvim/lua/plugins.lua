@@ -119,8 +119,9 @@ return {
       },
       {
         '<leader>gs',
-        '<cmd>Git status<cr>'
-      }
-    }
+        '<cmd>Git<cr>'
+      },
+    },
+    lazy = false
   }
 }
