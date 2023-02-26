@@ -167,5 +167,6 @@ return {
       },
     },
     lazy = false
-  }
+  },
+  { 'tpope/vim-rails' }
 }
