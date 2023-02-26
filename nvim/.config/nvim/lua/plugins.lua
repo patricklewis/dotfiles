@@ -99,6 +99,10 @@ return {
       require('neotest').setup({
         adapters = {
           require('neotest-rspec')
+        },
+        output = {
+          enabled = true,
+          open_on_run = true
         }
       })
     end,
@@ -109,6 +113,12 @@ return {
       'olimorris/neotest-rspec'
     },
     keys = {
+      {
+        '<leader>ro',
+        function()
+          require('neotest').output.open()
+        end
+      },
       {
         '<leader>rt',
         function()
