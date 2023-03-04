@@ -184,5 +184,13 @@ return {
     },
     lazy = false
   },
-  { 'tpope/vim-rails' }
+  { 'tpope/vim-rails' },
+  {
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+    config = function()
+      require('copilot').setup()
+    end
+  }
 }
