@@ -227,7 +227,7 @@ return {
     build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'javascript', 'lua', 'ruby', 'sql', 'vim' },
+        ensure_installed = { 'fish', 'javascript', 'lua', 'ruby', 'sql', 'vim' },
         highlight = {
           enable = true
         }
