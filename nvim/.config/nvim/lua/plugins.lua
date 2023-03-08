@@ -167,6 +167,12 @@ return {
     'ntpeters/vim-better-whitespace'
   },
   {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  },
+  {
     'nvim-lualine/lualine.nvim',
     config = function()
       require('lualine').setup {
