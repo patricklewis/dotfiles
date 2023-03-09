@@ -100,7 +100,13 @@ return {
   {
     'ibhagwan/fzf-lua',
     config = function()
-      require('fzf-lua').setup()
+      require('fzf-lua').setup({
+        keymap= {
+          fzf = {
+            ['CTRL-Q'] = 'select-all+accept'
+          }
+        }
+      })
     end,
     keys = {
       {
