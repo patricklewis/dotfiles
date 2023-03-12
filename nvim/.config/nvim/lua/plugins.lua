@@ -280,6 +280,7 @@ return {
     lazy = false
   },
   { 'tpope/vim-rails' },
+  { 'tpope/vim-unimpaired' },
   {
     'zbirenbaum/copilot.lua',
     cmd = 'Copilot',
