@@ -257,6 +257,9 @@ return {
     build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup {
+        endwise = {
+          enable = true
+        },
         ensure_installed = { 'fish', 'javascript', 'lua', 'ruby', 'sql', 'vim' },
         indent = {
           enable = true
@@ -265,7 +268,10 @@ return {
           enable = true
         }
       }
-    end
+    end,
+    dependencies = {
+      'RRethy/nvim-treesitter-endwise'
+    }
   },
   {
     'onsails/lspkind.nvim'
