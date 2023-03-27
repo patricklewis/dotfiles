@@ -262,6 +262,9 @@ return {
     'onsails/lspkind.nvim'
   },
   {
+    'rbong/vim-flog',
+  },
+  {
     'tpope/vim-fugitive',
     keys = {
       {
