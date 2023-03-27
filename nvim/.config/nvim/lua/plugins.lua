@@ -258,6 +258,9 @@ return {
     config = function()
       require('nvim-treesitter.configs').setup {
         ensure_installed = { 'fish', 'javascript', 'lua', 'ruby', 'sql', 'vim' },
+        indent = {
+          enable = true
+        },
         highlight = {
           enable = true
         }
