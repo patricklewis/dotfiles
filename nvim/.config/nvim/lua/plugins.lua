@@ -294,8 +294,9 @@ return {
     event = 'InsertEnter',
     config = function()
       require('copilot').setup({
-        suggestion = { enabled = false },
-        panel = { enabled = false }
+        copilot_node_command = vim.fn.expand("$HOME") .. '/.nodenv/versions/18.15.0/bin/node',
+        panel = { enabled = false },
+        suggestion = { enabled = false }
       })
     end
   },
