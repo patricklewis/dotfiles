@@ -27,6 +27,7 @@ opt.number = true
 opt.shiftwidth = 2
 opt.signcolumn = 'yes'
 opt.smartcase = true
+opt.smartindent = true
 opt.tabstop = 2
 opt.termguicolors = true
 
