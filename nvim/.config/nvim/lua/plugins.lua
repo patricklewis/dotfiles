@@ -101,6 +101,9 @@ return {
       require('lspconfig')['solargraph'].setup {
         capabilities = capabilities
       }
+
+      require'lspconfig'.eslint.setup{}
+      require'lspconfig'.flow.setup{}
     end
   },
   {
