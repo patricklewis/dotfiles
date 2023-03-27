@@ -156,20 +156,6 @@ return {
     end
   },
   {
-    'mfussenegger/nvim-lint',
-    config = function()
-      require('lint').linters_by_ft = {
-        ruby = {'rubocop'}
-      }
-
-      vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-        callback = function()
-          require("lint").try_lint()
-        end,
-      })
-    end
-  },
-  {
     'neovim/nvim-lspconfig',
     config = function()
       require('lspconfig').solargraph.setup{}
