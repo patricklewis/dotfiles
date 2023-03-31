@@ -247,9 +247,6 @@ return {
           enable = true
         },
         ensure_installed = { 'fish', 'javascript', 'lua', 'ruby', 'sql', 'vim' },
-        indent = {
-          enable = true
-        },
         highlight = {
           enable = true
         }
