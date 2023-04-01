@@ -89,7 +89,11 @@ return {
           { name = 'vsnip' }
         }, {
           { name = 'buffer' }
-        })
+        }),
+        window = {
+          completion = { border = 'single' },
+          documentation = { border = 'single' }
+        }
       })
 
       cmp.event:on(
