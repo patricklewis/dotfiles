@@ -202,10 +202,7 @@ return {
     end
   },
   {
-    'neovim/nvim-lspconfig',
-    config = function()
-      require('lspconfig').solargraph.setup{}
-    end
+    'neovim/nvim-lspconfig'
   },
   {
     'numToStr/Comment.nvim',
