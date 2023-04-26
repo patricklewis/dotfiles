@@ -37,7 +37,6 @@ return {
       end
 
       local cmp = require('cmp')
-      local cmp_autopairs = require('nvim-autopairs.completion.cmp')
       local lspkind = require('lspkind')
 
       cmp.setup({
@@ -95,11 +94,6 @@ return {
           documentation = { border = 'single' }
         }
       })
-
-      cmp.event:on(
-        'confirm_done',
-        cmp_autopairs.on_confirm_done()
-      )
 
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       require('lspconfig')['solargraph'].setup {
@@ -325,12 +319,6 @@ return {
   },
   {
     'tpope/vim-unimpaired'
-  },
-  {
-    'windwp/nvim-autopairs',
-    config = function()
-      require('nvim-autopairs').setup()
-    end
   },
   {
     'zbirenbaum/copilot.lua',
