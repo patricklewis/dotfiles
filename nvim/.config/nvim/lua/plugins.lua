@@ -326,7 +326,7 @@ return {
     event = 'InsertEnter',
     config = function()
       require('copilot').setup({
-        copilot_node_command = vim.fn.expand("$HOME") .. '/.nodenv/versions/18.15.0/bin/node',
+        copilot_node_command = vim.fn.expand("$HOME") .. '/.asdf/installs/nodejs/18.16.0/bin/node',
         panel = { enabled = false },
         suggestion = { enabled = false }
       })
