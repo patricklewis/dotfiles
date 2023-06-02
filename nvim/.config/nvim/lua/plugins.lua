@@ -83,9 +83,9 @@ return {
           end, { "i", "s" }),
         }),
         sources = cmp.config.sources({
-          { name = 'copilot' },
-          { name = 'nvim_lsp' },
-          { name = 'vsnip' }
+          { name = 'copilot', group_index = 2 },
+          { name = 'nvim_lsp', group_index = 2 },
+          { name = 'vsnip', group_index = 2 }
         }, {
           { name = 'buffer' }
         }),
