@@ -22,6 +22,7 @@ return {
     'hrsh7th/nvim-cmp',
     dependencies = {
       'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-vsnip',
       'hrsh7th/vim-vsnip'
     },
@@ -37,8 +38,20 @@ return {
       end
 
       local cmp = require('cmp')
+      local lspkind = require('lspkind')
 
       cmp.setup({
+        formatting = {
+          format = lspkind.cmp_format({
+            mode = 'symbol',
+            maxwidth = 50,
+            symbol_map = { Copilot = "" },
+            ellipsis_char = '...',
+            before = function(entry, vim_item)
+              return vim_item
+            end
+          })
+        },
         snippet = {
           expand = function(args)
             vim.fn['vsnip#anonymous'](args.body)
@@ -72,6 +85,7 @@ return {
         }),
         sources = cmp.config.sources({
           { name = 'copilot', group_index = 2 },
+          { name = 'nvim_lsp', group_index = 2 },
           { name = 'vsnip', group_index = 2 }
         }, {
           { name = 'buffer' }
@@ -81,6 +95,20 @@ return {
           documentation = { border = 'single' }
         }
       })
+
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+      require('lspconfig')['solargraph'].setup {
+        capabilities = capabilities
+      }
+
+      require'lspconfig'.eslint.setup {
+        capabilities = capabilities
+      }
+
+      require'lspconfig'.flow.setup {
+        capabilities = capabilities
+      }
     end
   },
   {
@@ -175,6 +203,9 @@ return {
     end
   },
   {
+    'neovim/nvim-lspconfig'
+  },
+  {
     'numToStr/Comment.nvim',
     config = function()
       require('Comment').setup()
@@ -265,6 +296,9 @@ return {
     dependencies = {
       'RRethy/nvim-treesitter-endwise'
     }
+  },
+  {
+    'onsails/lspkind.nvim'
   },
   {
     'rbong/vim-flog',
