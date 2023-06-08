@@ -1,4 +1,5 @@
 return {
+  { 'dense-analysis/ale' },
   {
     'folke/trouble.nvim',
     config = function()
