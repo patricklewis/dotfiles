@@ -194,6 +194,9 @@ return {
     'neovim/nvim-lspconfig'
   },
   {
+    'ntpeters/vim-better-whitespace'
+  },
+  {
     'numToStr/Comment.nvim',
     config = function()
       require('Comment').setup()
