@@ -13,6 +13,9 @@ end
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- disable diagnostics from LSP
+vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+
 local opt = vim.opt
 
 opt.rtp:prepend(lazypath)
