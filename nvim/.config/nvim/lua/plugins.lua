@@ -96,12 +96,18 @@ return {
       })
 
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
       require('lspconfig')['solargraph'].setup {
         capabilities = capabilities
       }
 
-      require'lspconfig'.eslint.setup{}
-      require'lspconfig'.flow.setup{}
+      require'lspconfig'.eslint.setup {
+        capabilities = capabilities
+      }
+
+      require'lspconfig'.flow.setup {
+        capabilities = capabilities
+      }
     end
   },
   {
