@@ -205,6 +205,14 @@ return {
     'nvim-lualine/lualine.nvim',
     config = function()
       require('lualine').setup {
+        extensions = {
+          'fugitive',
+          'fzf',
+          'lazy',
+          'nvim-tree',
+          'quickfix',
+          'trouble'
+        },
         options = {
           theme = 'dracula'
         }
