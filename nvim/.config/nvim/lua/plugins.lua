@@ -331,6 +331,12 @@ return {
     'tpope/vim-unimpaired'
   },
   {
+    'tiagovla/scope.nvim',
+    config = function()
+      require('scope').setup({})
+    end
+  },
+  {
     'zbirenbaum/copilot.lua',
     cmd = 'Copilot',
     event = 'InsertEnter',
