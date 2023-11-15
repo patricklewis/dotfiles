@@ -131,19 +131,6 @@ return {
     }
   },
   {
-    'kdheepak/tabline.nvim',
-    config = function()
-      require('tabline').setup({
-        enable = true
-      })
-
-      vim.cmd[[
-        set guioptions-=e
-        set sessionoptions+=tabpages,globals
-      ]]
-    end
-  },
-  {
     'kylechui/nvim-surround',
     config = function()
       require('nvim-surround').setup()
