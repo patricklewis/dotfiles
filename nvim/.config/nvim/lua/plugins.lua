@@ -1,4 +1,27 @@
 return {
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    config = function()
+      require('catppuccin').setup({
+        flavour = 'latte',
+        background = {
+          light = 'latte',
+          dark = 'latte',
+        },
+        integrations = {
+          cmp = true,
+          gitsigns = true,
+          nvimtree = true,
+          treesitter = true,
+        }
+      })
+
+      vim.o.background = 'light'
+      vim.cmd.colorscheme 'catppuccin'
+    end
+  },
   { 'dense-analysis/ale' },
   {
     'folke/trouble.nvim',
@@ -182,14 +205,6 @@ return {
     end
   },
   {
-    'Mofiqul/dracula.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd[[colorscheme dracula]]
-    end
-  },
-  {
     'neovim/nvim-lspconfig'
   },
   {
@@ -214,7 +229,7 @@ return {
           'trouble'
         },
         options = {
-          theme = 'dracula'
+          theme = 'catppuccin'
         },
         tabline = {
           lualine_a = {'buffers'},
