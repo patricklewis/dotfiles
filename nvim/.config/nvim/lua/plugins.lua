@@ -253,46 +253,6 @@ return {
     },
   },
   {
-    'nvim-neotest/neotest',
-    config = function()
-      require('neotest').setup({
-        adapters = {
-          require('neotest-rspec')
-        },
-        output = {
-          enabled = true,
-          open_on_run = true
-        }
-      })
-    end,
-    dependencies = {
-      'antoinemadec/FixCursorHold.nvim',
-      'nvim-lua/plenary.nvim',
-      'nvim-treesitter/nvim-treesitter',
-      'olimorris/neotest-rspec'
-    },
-    keys = {
-      {
-        '<leader>ro',
-        function()
-          require('neotest').output.open()
-        end
-      },
-      {
-        '<leader>rt',
-        function()
-          require('neotest').run.run(vim.fn.expand('%'))
-        end
-      },
-      {
-        '<leader>rT',
-        function()
-          require('neotest').run.run()
-        end
-      }
-    }
-  },
-  {
     'nvim-tree/nvim-tree.lua',
     config = function()
       require('nvim-tree').setup()
