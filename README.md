@@ -7,7 +7,3 @@
 1. Install stow
 2. Clone repository into ~/.dotfiles
 3. cd into the cloned directory and `stow vim`, `stow tmux`, etc.
-
-## Vim / Neovim
-
-[vim-plug](https://github.com/junegunn/vim-plug) is included, execute `:PlugUpgrade` and `:PlugInstall` on first run to install plugins from .vimrc
