@@ -49,86 +49,6 @@ return {
     end
   },
   {
-    'hrsh7th/nvim-cmp',
-    dependencies = {
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-vsnip',
-      'hrsh7th/vim-vsnip'
-    },
-    config = function()
-      local has_words_before = function()
-        if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
-        local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-        return col ~= 0 and vim.api.nvim_buf_get_text(0, line-1, 0, line-1, col, {})[1]:match("^%s*$") == nil
-      end
-
-      local cmp = require('cmp')
-
-      cmp.setup({
-        mapping = cmp.mapping.preset.insert({
-          ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-f>'] = cmp.mapping.scroll_docs(4),
-          ['<C-Space>'] = cmp.mapping.complete(),
-          ['<C-e>'] = cmp.mapping.abort(),
-          ['<CR>'] = cmp.mapping.confirm({ select = true }),
-          ['<Tab>'] = vim.schedule_wrap(function(fallback)
-            if cmp.visible() and has_words_before() then
-              cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-            else
-              fallback()
-            end
-          end),
-        }),
-        snippet = {
-          expand = function(args)
-            vim.fn['vsnip#anonymous'](args.body)
-          end
-        },
-        sorting = {
-          priority_weight = 2,
-          comparators = {
-            require("copilot_cmp.comparators").prioritize,
-            cmp.config.compare.offset,
-            cmp.config.compare.exact,
-            cmp.config.compare.score,
-            cmp.config.compare.recently_used,
-            cmp.config.compare.locality,
-            cmp.config.compare.kind,
-            cmp.config.compare.sort_text,
-            cmp.config.compare.length,
-            cmp.config.compare.order
-          }
-        },
-        sources = cmp.config.sources({
-          { name = 'copilot', group_index = 2 },
-          { name = 'nvim_lsp', group_index = 2 },
-          { name = 'vsnip', group_index = 2 }
-        }, {
-          { name = 'buffer' }
-        }),
-        window = {
-          completion = { border = 'single' },
-          documentation = { border = 'single' }
-        }
-      })
-
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-      require('lspconfig')['solargraph'].setup {
-        capabilities = capabilities
-      }
-
-      require('lspconfig')['eslint'].setup {
-        capabilities = capabilities
-      }
-
-      require('lspconfig')['flow'].setup {
-        capabilities = capabilities
-      }
-    end
-  },
-  {
     'ibhagwan/fzf-lua',
     config = function()
       require('fzf-lua').setup({
@@ -316,25 +236,6 @@ return {
     'tiagovla/scope.nvim',
     config = function()
       require('scope').setup({})
-    end
-  },
-  {
-    'zbirenbaum/copilot.lua',
-    cmd = 'Copilot',
-    event = 'InsertEnter',
-    config = function()
-      require('copilot').setup({
-        copilot_node_command = vim.fn.expand("$HOME") .. '/.asdf/installs/nodejs/20.14.0/bin/node',
-        panel = { enabled = false },
-        suggestion = { enabled = false }
-      })
-    end
-  },
-  {
-    'zbirenbaum/copilot-cmp',
-    after = { 'copilot.lua' },
-    config = function()
-      require('copilot_cmp').setup()
     end
   }
 }
