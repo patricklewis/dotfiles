@@ -13,8 +13,9 @@ end
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- disable diagnostics from LSP
-vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+-- -- disable diagnostics from LSP
+-- vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+vim.lsp.enable('eslint', 'ruby_lsp')
 
 local opt = vim.opt
 
