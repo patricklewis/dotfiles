@@ -40,3 +40,5 @@ opt.tabstop = 2
 opt.termguicolors = true
 
 require("lazy").setup("plugins")
+require("mason").setup()
+require("mason-lspconfig").setup()
