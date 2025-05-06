@@ -90,6 +90,10 @@ return {
         capabilities = capabilities
       }
 
+      require('lspconfig')['lua_ls'].setup {
+        capabilities = capabilities
+      }
+
       require('lspconfig')['ruby_lsp'].setup {
         capabilities = capabilities
       }

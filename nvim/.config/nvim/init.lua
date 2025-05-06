@@ -17,6 +17,7 @@ vim.g.loaded_netrwPlugin = 1
 -- vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
 vim.lsp.enable(
   'eslint',
+  'lua_ls',
   'ruby_lsp',
   'yamlls'
 )
