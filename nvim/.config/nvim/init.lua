@@ -13,15 +13,6 @@ end
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- -- disable diagnostics from LSP
--- vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
-vim.lsp.enable(
-  'eslint',
-  'lua_ls',
-  'ruby_lsp',
-  'yamlls'
-)
-
 local opt = vim.opt
 
 opt.rtp:prepend(lazypath)
@@ -41,5 +32,3 @@ opt.tabstop = 2
 opt.termguicolors = true
 
 require("lazy").setup("plugins")
-require("mason").setup()
-require("mason-lspconfig").setup()
