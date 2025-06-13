@@ -4,6 +4,6 @@ fish/.config/fish/completions/
 fish/.config/fish/fish_variables
 fish/.config/fish/functions/
 fishd.*
-tmux/.tmux/plugins
-!tmux/.tmux/plugins/tpm
+tmux/.config/tmux/plugins
+!tmux/.config/tmux/plugins/tpm
 lazy-lock.json
