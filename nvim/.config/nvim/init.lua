@@ -18,7 +18,7 @@ local opt = vim.opt
 opt.rtp:prepend(lazypath)
 
 opt.expandtab = true
-opt.foldexpr = 'nvim_treesitter#foldexpr()'
+opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 opt.foldlevelstart = 99
 opt.foldmethod = 'expr'
 opt.hlsearch = true
