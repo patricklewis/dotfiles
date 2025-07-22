@@ -247,7 +247,16 @@ return {
         endwise = {
           enable = true
         },
-        ensure_installed = { 'fish', 'javascript', 'lua', 'ruby', 'sql', 'vim' },
+        ensure_installed = {
+          'fish',
+          'javascript',
+          'json',
+          'jsonc',
+          'lua',
+          'ruby',
+          'sql',
+          'vim'
+        },
         highlight = {
           enable = true
         }

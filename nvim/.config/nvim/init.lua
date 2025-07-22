@@ -13,6 +13,13 @@ end
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- configure JSON syntax highlighting for Avro schema files
+vim.filetype.add({
+  extension = {
+    avsc = 'json',
+  }
+})
+
 local opt = vim.opt
 
 opt.rtp:prepend(lazypath)
@@ -32,3 +39,5 @@ opt.tabstop = 2
 opt.termguicolors = true
 
 require("lazy").setup("plugins")
+
+
