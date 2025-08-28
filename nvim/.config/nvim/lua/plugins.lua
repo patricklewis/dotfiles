@@ -22,7 +22,6 @@ return {
       vim.cmd.colorscheme 'catppuccin'
     end
   },
-  { 'dense-analysis/ale' },
   {
     'folke/trouble.nvim',
     config = function()
