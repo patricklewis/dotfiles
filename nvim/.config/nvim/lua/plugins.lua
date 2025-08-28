@@ -186,6 +186,9 @@ return {
     end
   },
   {
+    'neovim/nvim-lspconfig'
+  },
+  {
     'ntpeters/vim-better-whitespace'
   },
   {
@@ -299,11 +302,10 @@ return {
     end
   },
   {
-    "mason-org/mason-lspconfig.nvim",
+    'mason-org/mason-lspconfig.nvim',
     opts = {},
     dependencies = {
-      { "mason-org/mason.nvim", opts = {} },
-      "neovim/nvim-lspconfig",
+      { 'mason-org/mason.nvim', opts = {} },
     },
   },
 }
