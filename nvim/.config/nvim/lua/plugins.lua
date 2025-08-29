@@ -85,6 +85,10 @@ return {
 
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+      require('lspconfig')['bashls'].setup {
+        capabilities = capabilities
+      }
+
       require('lspconfig')['eslint'].setup {
         capabilities = capabilities
       }
@@ -188,6 +192,15 @@ return {
           -- Text object
           map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
         end
+      }
+    end
+  },
+  {
+    'mfussenegger/nvim-lint',
+    config = function()
+      require('lint').linters_by_ft = {
+        bash = { 'shellcheck' },
+        ruby = { 'rubocop' }
       }
     end
   },
