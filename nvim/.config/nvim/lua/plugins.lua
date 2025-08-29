@@ -94,7 +94,13 @@ return {
       }
 
       require('lspconfig')['ruby_lsp'].setup {
-        capabilities = capabilities
+        capabilities = capabilities,
+        init_options = {
+          enabledFeatures = {
+            diagnostics = false,
+            formatting = false
+          }
+        }
       }
 
       require('lspconfig')['yamlls'].setup {
