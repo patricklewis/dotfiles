@@ -243,7 +243,7 @@ return {
     end,
     dependencies = {
       'nvim-tree/nvim-web-devicons'
-    },
+    }
   },
   {
     'nvim-tree/nvim-tree.lua',
@@ -288,7 +288,7 @@ return {
     }
   },
   {
-    'rbong/vim-flog',
+    'rbong/vim-flog'
   },
   {
     'tpope/vim-fugitive',
@@ -304,7 +304,7 @@ return {
       {
         '<leader>gs',
         '<cmd>Git<cr>'
-      },
+      }
     },
     lazy = false
   },
@@ -324,7 +324,7 @@ return {
     'mason-org/mason-lspconfig.nvim',
     opts = {},
     dependencies = {
-      { 'mason-org/mason.nvim', opts = {} },
-    },
-  },
+      { 'mason-org/mason.nvim', opts = {} }
+    }
+  }
 }
