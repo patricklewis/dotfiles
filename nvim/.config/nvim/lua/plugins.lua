@@ -23,6 +23,15 @@ return {
     end
   },
   {
+    'dense-analysis/ale',
+    config = function()
+      vim.g.ale_disable_lsp = 1
+      vim.g.ale_linters = {
+        ruby = {'rubocop', 'ruby'}
+      }
+    end
+  },
+  {
     'folke/trouble.nvim',
     config = function()
       require('trouble').setup()
@@ -192,15 +201,6 @@ return {
           -- Text object
           map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
         end
-      }
-    end
-  },
-  {
-    'mfussenegger/nvim-lint',
-    config = function()
-      require('lint').linters_by_ft = {
-        bash = { 'shellcheck' },
-        ruby = { 'rubocop' }
       }
     end
   },
