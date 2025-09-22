@@ -94,19 +94,36 @@ return {
 
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-      require('lspconfig')['bashls'].setup {
+      vim.lsp.config('bashls', {
         capabilities = capabilities
-      }
+      })
 
-      require('lspconfig')['eslint'].setup {
+      vim.lsp.config('eslint', {
         capabilities = capabilities
-      }
+      })
 
-      require('lspconfig')['lua_ls'].setup {
-        capabilities = capabilities
-      }
+      vim.lsp.config('lua_ls', {
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            runtime = {
+              version = 'LuaJIT'
+            },
+            diagnostics = {
+              globals = {'vim'}
+            },
+            workspace = {
+              library = vim.api.nvim_get_runtime_file("", true),
+              checkThirdParty = false
+            },
+            telemetry = {
+              enable = false
+            }
+          }
+        }
+      })
 
-      require('lspconfig')['ruby_lsp'].setup {
+      vim.lsp.config('ruby_lsp', {
         capabilities = capabilities,
         init_options = {
           enabledFeatures = {
@@ -114,11 +131,11 @@ return {
             formatting = false
           }
         }
-      }
+      })
 
-      require('lspconfig')['yamlls'].setup {
+      vim.lsp.config('yamlls', {
         capabilities = capabilities
-      }
+      })
     end
   },
   {
